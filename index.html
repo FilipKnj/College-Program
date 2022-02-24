@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Studentski Program za Ucenje</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
+<body>
+  <!-- Main Header -->
+  <nav class="main-header clearfix">
+    <h1 class="nav-logo">
+      Studying Program
+    </h1>
+    <ul class="nav-list">
+      <li class="nav-links">All Questions</li>
+      <li class="nav-links">Know</li>
+      <li class="nav-links">Dont Know</li>
+    </ul>
+  </nav>
+  <!-- Main Header End -->
+
+  <!-- Okvir gde se pitanja upisuju i postavljaju -->
+  <div class="container" id='mainQuestionBody'>
+    <div class="container-header clearfix">
+      <h2 class="nav-logo">Category :</h2>
+      <select name="category" id="chooseCategory" class="header-select">
+        <option id='allQuestionsLink' value="All Questions">All Questions</option>
+        <option id='knowQuestionsLink' value="Know">Know</option>
+        <option id='dontKnowQuestionsLink' value="Dont Know">Don't Know</option>
+      </select>
+    </div>
+    <div id="mainBody">
+      <div class="question-div">
+        <span id="questionIndex">1.</span>
+        <span id="question">Lorem ipsum dolor?</span>
+      </div>
+      <div class="answer-div">
+        <span id="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam officiis magni voluptatem repellat dolore aliquid quis.</span>
+        <i title='Show Answer' id='showHide' class="bi bi-eye-slash-fill"></i>
+      </div>
+      <div class="controls">
+        <button title='Add Question' id='addBtn' class="btn">Add</button>
+        <input title='Random Questions' type="checkbox"  id='checkbox'>
+        <button title='Next Questions' id='nextBtn' class="btn">Next</button>
+      </div>
+    </div>
+    <div class='hide' id="formBody">
+      <div class="input-div">
+        <label>Dodaj Pitanje</label>
+        <textarea id="addQuestion" placeholder='Glavni grad Srbije?'></textarea>
+      </div>
+      <div class="input-div">
+        <label>Dodaj Odgovor</label>
+        <textarea id="addAnswer" placeholder='Beograd'></textarea>
+      </div>
+      <div class="input-div">
+        <label for="category">Choose a category:</label>
+        <select id='category' name="category">
+          <option value="All" selected>All</option>
+          <option value="Znam">Znam</option>
+          <option value="Ne znam">Ne znam</option>
+        </select>
+      </div>
+      <div class="controls">
+        <button title='Add Question' id='addQuestionBtn' class="btn">Add</button>
+        <button title='Go Back' id='backBtn' class="btn">Go Back</button>
+      </div>
+    </div>
+  </div>
+  <!-- Kraj okvira gde se pitanja upisuju i postavljaju -->
+  <!-- Okvir gde se prikazuju sva pitanja i odgovori po kategoriji -->
+  <div class="container hide" id="showBody">
+    <div class="container-header clearfix">
+      <h2 id='showBodyHeader' class="nav-logo">All Questions</h2>
+      <i title='Exit' id='exit' class="bi bi-backspace-fill"></i>
+    </div>
+    <div id="showBodyHolder">
+
+    </div>
+  </div>
+  <!-- Kraj Okvira gde se prikazuju sva pitanja i odgovori po kategoriji -->
+
+<script src="main.js" charset="utf-8"></script>
+<script src="display.js" charset="utf-8"></script>
+<script src="show.js" charset="utf-8"></script>
+</body>
+</html>
